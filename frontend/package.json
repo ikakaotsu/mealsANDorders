@@ -1,0 +1,16 @@
+{
+  "name": "mealsandorders",
+  "version": "0.0.1",
+  "description": "Rest Api of meals and orders Udemy Course",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ./node_modules/http-server/bin/http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ikakaotsu <ikakaotsu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
+  "proxy": "http://backend:3000"
+}
