@@ -22,9 +22,9 @@ services:
     ports:
       - 8080:8080
     stdin_open: true
-    volumes:
-      - ./frontend:/usr/src/app
-      - /usr/src/app/node_modules
+    #volumes:
+    # - ./frontend:/usr/src/app
+    # - /usr/src/app/node_modules
     container_name: frontend
     restart: always
     networks:
@@ -36,9 +36,9 @@ services:
     image: ikakaotsu/mealsandorders_backend:v1
     restart: always
     #build: backend
-    volumes:
-      - ./backend:/usr/src/app
-      - /usr/src/app/node_modules
+    #volumes:
+    # - ./backend:/usr/src/app
+    # - /usr/src/app/node_modules
     depends_on:
       - mongodb
     networks:
