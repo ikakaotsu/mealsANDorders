@@ -16,7 +16,9 @@ services:
     networks:
       - express-mongo
   frontend:
-    build: frontend
+    container_name: frontend
+    image: ikakaotsu/mealsandorders_frontend
+    #build: frontend
     ports:
       - 8080:8080
     stdin_open: true
@@ -31,8 +33,9 @@ services:
       - backend
   backend:
     container_name: backend
+    image: ikakaotsu/mealsandorders_backend
     restart: always
-    build: backend
+    #build: backend
     volumes:
       - ./backend:/usr/src/app
       - /usr/src/app/node_modules
